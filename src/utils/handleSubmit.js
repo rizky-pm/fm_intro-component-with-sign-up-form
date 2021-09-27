@@ -9,22 +9,22 @@ export const handleSubmit = (e, validInput, setValidInput) => {
     const password = e.target.password.value;
 
     if (firstName.length < 1) {
-        errors.firstName = 'First Name cannot be empty';
-        setValidInput({ errors, firstName });
+        errors.firstName = false;
+        setValidInput({ errors });
     }
 
     if (lastName.length < 1) {
-        errors.lastName = 'Last Name cannot be empty';
-        setValidInput({ errors, lastName });
+        errors.lastName = false;
+        setValidInput({ errors });
     }
 
     if (!validEmailRegex.test(email)) {
-        errors.email = 'Looks like this is not an email';
-        setValidInput({ errors, email });
+        errors.email = false;
+        setValidInput({ errors });
     }
 
     if (password.length < 1) {
-        errors.password = 'Password cannot be empty';
-        setValidInput({ errors, password });
+        errors.password = false;
+        setValidInput({ errors });
     }
 };

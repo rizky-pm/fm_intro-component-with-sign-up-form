@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
     colors: {
-        primary: 'hsl(0, 100%, 74%) ',
+        primary: 'hsl(0, 100%, 74%)',
         secondary: 'hsl(154, 59%, 51%)',
         accent: 'hsl(248, 32%, 49%)',
         darkBlue: 'hsl(249, 10%, 26%)',

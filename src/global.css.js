@@ -15,7 +15,6 @@ const GlobalStyles = createGlobalStyle`
         font-size: 1rem;
         color: white;
         background-color: ${(props) => props.theme.colors.primary};
-        /* background-color: white; */
     }
 `;
 

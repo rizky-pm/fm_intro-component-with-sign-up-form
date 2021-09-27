@@ -7,25 +7,20 @@ export const handleChange = (e, validInput, setValidInput) => {
 
     switch (name) {
         case 'firstname':
-            errors.firstName =
-                value.length < 1 ? 'First Name cannot be empty' : '';
+            errors.firstName = value.length < 1 ? false : true;
             break;
         case 'lastname':
-            errors.lastName =
-                value.length < 1 ? 'Last Name cannot be empty' : '';
+            errors.lastName = value.length < 1 ? false : true;
             break;
         case 'email':
-            errors.email = validEmailRegex.test(value)
-                ? ''
-                : 'Looks like this is not an email';
+            errors.email = validEmailRegex.test(value) ? true : false;
             break;
         case 'password':
-            errors.password =
-                value.length < 1 ? 'Password cannot be empty' : '';
+            errors.password = value.length < 1 ? false : true;
             break;
         default:
             break;
     }
 
-    setValidInput({ errors, [name]: value });
+    setValidInput({ errors });
 };
